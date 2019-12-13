@@ -18,11 +18,13 @@ export class FormTwoComponent implements OnInit {
     const self = this;
     this.ngRedux.subscribe(function() {
       let formOne = state.getState().formOne.formOne;
-      if (formOne.fname.value != undefined) {
-        self.fname = formOne.fname.value;
-      }
-      if (formOne.lname.value != undefined) {
-        self.lname = formOne.lname.value;
+      if(state.getState().formOne.actionType == "formOnesubmit"){
+        if (formOne.fname.value != undefined) {
+          self.fname = formOne.fname.value;
+        }
+        if (formOne.lname.value != undefined) {
+          self.lname = formOne.lname.value;
+        }
       }
     });
   }

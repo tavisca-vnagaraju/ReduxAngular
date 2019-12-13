@@ -14,8 +14,17 @@ export class FormOneComponent implements OnInit {
   constructor(private ngRedux: NgRedux<IAppState>) { }
   ngOnInit() {
     let state = this.ngRedux;
-    this.ngRedux.subscribe(function(){
-      console.log(state.getState().formOne.formOne);
+    const self = this;
+    this.ngRedux.subscribe(function() {
+      let formTwo = state.getState().formTwo.formTwo;
+      if(state.getState().formTwo.actionType == "formTwosubmit"){
+        if (formTwo.fname.value != undefined) {
+          self.fname = formTwo.fname.value;
+        }
+        if (formTwo.lname.value != undefined) {
+          self.lname = formTwo.lname.value;
+        }
+      }
     });
   }
   fnameFocusIn(): void {

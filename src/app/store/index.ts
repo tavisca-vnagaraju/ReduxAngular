@@ -21,6 +21,7 @@ function FormOneReducer(state = null, action: any) {
     state.formOne.fname = new Fname();
     state.formOne.lname = new Lname();
   }
+  state.actionType = action.type;
   switch (action.type) {
     case "formOnefNameFocusIn":
       state.formOne.fname.isFocused = action.payload;
@@ -62,6 +63,7 @@ function FormTwoReducer(state = null, action: any) {
     state.formTwo.fname = new Fname();
     state.formTwo.lname = new Lname();
   }
+  state.actionType = action.type;
   switch (action.type) {
     case "formTwofNameFocusIn":
       state.formTwo.fname.isFocused = action.payload;

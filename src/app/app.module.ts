@@ -9,10 +9,11 @@ import { NgReduxModule } from '@angular-redux/store';
 import { NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { rootReducer, IAppState } from './store/index';
 import { FormOneComponent } from './form-one/form-one.component';
+import { FormTwoComponent } from './form-two/form-two.component';
 
 @NgModule({
   imports: [ NgReduxModule, BrowserModule, FormsModule, HttpModule ],
-  declarations: [ AppComponent, FormOneComponent ],
+  declarations: [ AppComponent, FormOneComponent, FormTwoComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {

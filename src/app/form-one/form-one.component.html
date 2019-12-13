@@ -1,0 +1,14 @@
+<div class="form-one">
+    <h1> Form One </h1>
+    <div class="first-name">
+        <label > First Name </label>
+        <input type="text" [(ngModel)]="fname" (focus)="fnameFocusIn()" (focusout)="fnameFocusOut()">
+    </div>
+    <div class="last-name">
+        <label > Last Name </label>
+        <input type="text" [(ngModel)]="lname" (focus)="lnameFocusIn()" (focusout)="lnameFocusOut()">
+    </div>
+    <div>
+        <input type="button" value="Submit" (click)="submit()">
+    </div>
+</div>

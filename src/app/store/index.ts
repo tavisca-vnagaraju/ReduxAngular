@@ -47,8 +47,8 @@ function FormOneReducer(state = null, action: any) {
       return state;
 
     case "formOnesubmit":
-      state.formOne.lname.lname = action.payload.lname;
-      state.formOne.fname.fname = action.payload.fname;
+      state.formOne.lname.value = action.payload.lname;
+      state.formOne.fname.value = action.payload.fname;
       return state;
 
     default:
@@ -88,8 +88,8 @@ function FormTwoReducer(state = null, action: any) {
       return state;
 
     case "formTwosubmit":
-      state.formTwo.fname.fname = action.payload.fname;
-      state.formTwo.lname.lname = action.payload.lname;
+      state.formTwo.fname.value = action.payload.fname;
+      state.formTwo.lname.value = action.payload.lname;
       return state;
 
     default:

@@ -1,5 +1,5 @@
 export class Lname{
-    public lname:string;
+    public value:string;
     public isTouched:boolean;
     public isFocused:boolean;
 }

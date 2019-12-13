@@ -15,7 +15,7 @@ export class FormOneComponent implements OnInit {
   ngOnInit() {
     let state = this.ngRedux;
     this.ngRedux.subscribe(function(){
-      console.log(state.getState().formOne);
+      console.log(state.getState().formOne.formOne);
     });
   }
   fnameFocusIn(): void {
